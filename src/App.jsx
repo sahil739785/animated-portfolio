@@ -11,6 +11,7 @@ import useStore from '@store/useStore'
 // Lazy-loaded pages
 const Home = lazy(() => import('@pages/Home'))
 const ProjectDetail = lazy(() => import('@pages/ProjectDetail'))
+const NotFound = lazy(() => import('@pages/NotFound'))
 
 // Suspense fallback
 function PageLoader() {
@@ -62,6 +63,20 @@ function AnimatedRoutes() {
         <Route
           path="/projects/:slug"
           element={<ProjectDetail />}
+        />
+        <Route
+          path="*"
+          element={
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4 }}
+              style={{ willChange: 'opacity' }}
+            >
+              <NotFound />
+            </motion.div>
+          }
         />
       </Routes>
     </AnimatePresence>
