@@ -1,5 +1,7 @@
 # 🚀 Sahil Dherange | Animated Developer Portfolio
 
+🔗 **Live Demo:** [animated-portfolio-five-phi.vercel.app](https://animated-portfolio-five-phi.vercel.app)
+
 A highly interactive, award-winning-style developer portfolio built to master React, modern animation libraries, and performance optimization. This project serves as a playground for learning complex UI interactions, scroll-driven animations, and global state management.
 
 ---
